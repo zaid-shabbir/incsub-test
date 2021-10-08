@@ -110,89 +110,83 @@ const Signup = () => {
         <span className='signup-form__link-text'>Sign in</span>
       </div>
       <div className='signup-form__form'>
-        <div>
-          <div className='signup-form__textfield'>
-            <input
-              id='name'
-              placeholder=' '
-              type='text'
-              value={name}
-              onInput={updateName}
-              onBlur={validateName}
-            />
-            <label>Your Name</label>
-          </div>
-          {errors.nameError && (
-            <span className='signup-form__textfield-error'>
-              {errors.nameError}
-            </span>
-          )}
-          <div className='signup-form__textfield'>
-            <input
-              id='email'
-              placeholder=' '
-              type='text'
-              onInput={updateEmail}
-              onBlur={validateEmail}
-            />
-            <label>Email Address</label>
-          </div>
-          {errors.emailError && (
-            <span className='signup-form__textfield-error'>
-              {errors.emailError}
-            </span>
-          )}
-          <div className='signup-form__select'>
-            <select required value={role} onChange={updateRole}>
-              <option value='' disabled>
-                I would describe my user type as
-              </option>
-              <option value='developer'>Devleoper</option>
-              <option value='project_manager'>Project Manager</option>
-              <option value='qa_engineer'>QA Engineer</option>
-            </select>
-            <img
-              src={chevronDown}
-              alt=''
-              className='signup-form__select-icon'
-            />
-          </div>
-          <div className='signup-form__textfield'>
-            <input
-              id='password'
-              placeholder=' '
-              type='password'
-              onInput={updatePassword}
-              onBlur={validatePassword}
-            />
-            <label>Password</label>
-            <img
-              onClick={toggleShowPassword}
-              src={passwordIcon}
-              alt=''
-              className='signup-form__textfield-icon'
-            />
-          </div>
-          {errors.passwordError && (
-            <span className='signup-form__textfield-error'>
-              {errors.passwordError}
-            </span>
-          )}
-          <button
-            className='signup-form__button'
-            disabled={!isFormValid()}
-            onClick={signUp}
-          >
-            Next
-          </button>
-          <div className='signup-form__TOS'>
-            By clicking the "Next" button, you agree to creating a free account,
-            and to <br />
-            <span className='signup-form__link-text'>
-              Terms of Service
-            </span> and{" "}
-            <span className='signup-form__link-text'>Privacy Policy.</span>
-          </div>
+        <div className='signup-form__textfield'>
+          <input
+            id='name'
+            placeholder=' '
+            type='text'
+            value={name}
+            onInput={updateName}
+            onBlur={validateName}
+          />
+          <label>Your Name</label>
+        </div>
+        {errors.nameError && (
+          <span className='signup-form__textfield-error'>
+            {errors.nameError}
+          </span>
+        )}
+        <div className='signup-form__textfield'>
+          <input
+            id='email'
+            placeholder=' '
+            type='text'
+            onInput={updateEmail}
+            onBlur={validateEmail}
+          />
+          <label>Email Address</label>
+        </div>
+        {errors.emailError && (
+          <span className='signup-form__textfield-error'>
+            {errors.emailError}
+          </span>
+        )}
+        <div className='signup-form__select'>
+          <select required value={role} onChange={updateRole}>
+            <option value='' disabled>
+              I would describe my user type as
+            </option>
+            <option value='developer'>Devleoper</option>
+            <option value='project_manager'>Project Manager</option>
+            <option value='qa_engineer'>QA Engineer</option>
+          </select>
+          <img src={chevronDown} alt='' className='signup-form__select-icon' />
+        </div>
+        <div className='signup-form__textfield'>
+          <input
+            id='password'
+            placeholder=' '
+            type='password'
+            onInput={updatePassword}
+            onBlur={validatePassword}
+          />
+          <label>Password</label>
+          <img
+            onClick={toggleShowPassword}
+            src={passwordIcon}
+            alt=''
+            className='signup-form__textfield-icon'
+          />
+        </div>
+        {errors.passwordError && (
+          <span className='signup-form__textfield-error'>
+            {errors.passwordError}
+          </span>
+        )}
+        <button
+          className='signup-form__button'
+          disabled={!isFormValid()}
+          onClick={signUp}
+        >
+          Next
+        </button>
+        <div className='signup-form__TOS'>
+          By clicking the "Next" button, you agree to creating a free account,
+          and to <br />
+          <span className='signup-form__link-text'>
+            Terms of Service
+          </span> and{" "}
+          <span className='signup-form__link-text'>Privacy Policy.</span>
         </div>
       </div>
     </div>
