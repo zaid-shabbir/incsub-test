@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import SignupForm from "./components/SignupForm";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='signup-page'>
+      <section className='signup-page__left-side'>
+        <div className='signup-page__left-side-content'>
+          <SignupForm />
+        </div>
+      </section>
+      <section className='signup-page__right-side'>
+        <div className='signup-page__right-side-content'>
+          <div className='signup-page__heading-text'>Dummy Heading</div>
+          <p className='signup-page__normal-text'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+            provident iure eveniet consequuntur quidem obcaecati explicabo enim
+            id nisi? Architecto explicabo nam doloribus officiis sequi vero nisi
+            sint suscipit quibusdam?
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
